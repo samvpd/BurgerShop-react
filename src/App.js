@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {NavBar} from './Components/NavBar';
+import {Menu} from './Components/Menu';
+import GlobalStyle from './Components/GlobalStyle';
+import {ModalItem} from "./Components/ModalItem";
 
 function App() {
+
+  const [openItem, setOpenItem] = React.useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle/>
+      <NavBar/>
+      <Menu setOpenItem={setOpenItem}/>
+      <ModalItem openItem={openItem} setOpenItem={setOpenItem}/>
+    </>
   );
 }
 
