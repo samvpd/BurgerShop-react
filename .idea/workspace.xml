@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:lesson5" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2952044-24d6-41d2-8c5a-1c53718914a1" name="Default Changelist" comment="" />
+    <list default="true" id="f1fb0fc4-b8ce-478d-8a6f-51d4185302d8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,15 +17,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1jQhGrjMJeSo5hNvHM4lP0ZhkpI" />
+  <component name="ProjectId" id="1jYfJrjkjXbQAArKJsDAinAJCzJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,58 +40,55 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\workspace\mrdonald\src\image" />
-      <recent name="C:\workspace\mrdonald\src\Components" />
       <recent name="C:\workspace\mrdonald\public" />
+      <recent name="C:\workspace\mrdonald\src\Components\Menu" />
+      <recent name="C:\workspace\mrdonald\src\Components\Modal" />
+      <recent name="C:\workspace\mrdonald\src\Components\NavBar" />
+      <recent name="C:\workspace\mrdonald\src\Components\Order" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d2952044-24d6-41d2-8c5a-1c53718914a1" name="Default Changelist" comment="" />
-      <created>1603742130244</created>
+      <changelist id="f1fb0fc4-b8ce-478d-8a6f-51d4185302d8" name="Default Changelist" comment="" />
+      <created>1603985882693</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1603742130244</updated>
-      <workItem from="1603742135744" duration="8281000" />
-      <workItem from="1603908916079" duration="8657000" />
+      <updated>1603985882693</updated>
+      <workItem from="1603985885307" duration="4751000" />
+      <workItem from="1604072540803" duration="3578000" />
+      <workItem from="1604496922807" duration="10279000" />
+      <workItem from="1604932228905" duration="4873000" />
+      <workItem from="1605007583772" duration="9228000" />
+      <workItem from="1605642127610" duration="2503000" />
+      <workItem from="1605700537085" duration="1904000" />
+      <workItem from="1605702521318" duration="1690000" />
+      <workItem from="1605816114553" duration="679000" />
+      <workItem from="1605890198769" duration="4347000" />
+      <workItem from="1606037529120" duration="7346000" />
+      <workItem from="1606495209868" duration="1037000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="lesson5" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="WindowStateProjectService">
-    <state x="339" y="172" key="run.anything.popup" timestamp="1603911775244">
+    <state x="275" y="39" width="816" height="729" key="#Intentions" timestamp="1605896588870">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1603911775244" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1603910156914">
+    <state x="275" y="39" width="816" height="729" key="#Intentions/0.0.1366.768@0.0.1366.768" timestamp="1605896588870" />
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1603985911169">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1603910156914" />
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1603985911169" />
+    <state x="490" y="63" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605894531952">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="490" y="63" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1605894531952" />
+    <state x="346" y="89" key="search.everywhere.popup" timestamp="1605702430228">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1605702430228" />
   </component>
 </project>
