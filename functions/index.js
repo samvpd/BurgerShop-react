@@ -1,7 +1,7 @@
-const functions = require('firebase-functions');
-
-exports.sendUserEmail = functions.database.ref('orders/{pushID}')
-    .onCreate(order => console.log(order));
+// const functions = require('firebase-functions');
+//
+// exports.sendUserEmail = functions.database.ref('orders/{pushID}')
+//     .onCreate(order => console.log(order));
 
 
 // // Create and Deploy Your First Cloud Functions
