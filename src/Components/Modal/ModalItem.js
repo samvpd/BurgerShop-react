@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
 import {ButtonCheckout} from '../Style/ButtonCheckout';
+import {CountItem} from "./CountItem";
+import {useCount} from "../Hooks/useCount";
+import {totalPriceItems, formatCurrency} from "../Functions/secondaryFunction";
+import {Toppings} from "./Toppings";
+import {Choices} from "./Choices";
+import {useToppings} from "../Hooks/useToppings";
+import {useChoices} from "../Hooks/useChoices";
+import {Context} from "../Functions/context";
 
-const Overlay = styled.div`
+export const Overlay = styled.div`
   position: fixed;
   display: flex;
   justify-content: center;
@@ -46,35 +54,69 @@ const HeaderContent = styled.div`
   font-family: 'Pacifico', cursive;
 `;
 
-export const ModalItem = ({openItem, setOpenItem , orders, setOrders}) => {
+const TotalPriceItem = styled.div`
+  display: flex;
+  justify-content: space-between;
 
-  const closeModal = e => {
-    if (e.target.id === "overlay") {
-      setOpenItem(null);
+`;
+
+export const ModalItem = () => {
+    const {
+        orders: {orders, setOrders},
+        openItem: {openItem, setOpenItem}
+    } = useContext(Context);
+    const counter = useCount(openItem.count);
+    const toppings = useToppings(openItem);
+    const choices = useChoices(openItem);
+    const isEdit = openItem.index > -1;
+
+    const closeModal = e => {
+        if (e.target.id === "overlay") {
+            setOpenItem(null);
+        }
     }
-  }
 
-  const order = {
-    ...openItem
-  };
+    const order = {
+        ...openItem,
+        count: counter.count,
+        topping: toppings.toppings,
+        choice: choices.choice
+    };
 
-  const addToOrder = () => {
-    setOrders([...orders, order]);
-    setOpenItem(null);
-  }
+    const editOrder = () => {
+        const newOrders = [...orders];
+        newOrders[openItem.index] = order;
+        setOrders(newOrders);
+        setOpenItem(null);
+    }
 
-  return (
-    <Overlay id="overlay" onClick={closeModal}>
-      <Modal>
-        <Banner img={openItem.img}/>
-        <Content>
-          <HeaderContent>
-            <div>{openItem.name}</div>
-            <div>{openItem.price.toLocaleString('ru-RU', {style: 'currency', currency: 'RUB'})}</div>
-          </HeaderContent>
-          <ButtonCheckout onClick={addToOrder}>Добавить</ButtonCheckout>
-        </Content>
-      </Modal>
-    </Overlay>
-  )
+    const addToOrder = () => {
+        setOrders([...orders, order]);
+        setOpenItem(null);
+    }
+
+    return (
+        <Overlay id="overlay" onClick={closeModal}>
+            <Modal>
+                <Banner img={openItem.img}/>
+                <Content>
+                    <HeaderContent>
+                        <div>{openItem.name}</div>
+                        <div>{formatCurrency(openItem.price)}</div>
+                    </HeaderContent>
+                    <CountItem {...counter}/>
+                    {openItem.toppings && <Toppings {...toppings}/>}
+                    {openItem.choices && <Choices {...choices} openItem={openItem}/>}
+                    <TotalPriceItem>
+                        <span>Цена:</span>
+                        <span>{formatCurrency(totalPriceItems(order))}</span>
+                    </TotalPriceItem>
+                    <ButtonCheckout
+                        onClick={isEdit ? editOrder : addToOrder}
+                        disabled={order.choices && !order.choice}
+                    >{isEdit ? 'Редактировать' : 'Добавить'}</ButtonCheckout>
+                </Content>
+            </Modal>
+        </Overlay>
+    )
 };
